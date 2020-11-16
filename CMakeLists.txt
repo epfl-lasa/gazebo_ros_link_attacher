@@ -27,6 +27,10 @@ find_package(catkin REQUIRED COMPONENTS
 # Depend on system install of Gazebo
 find_package(gazebo REQUIRED)
 
+# Add pre-compile defination for Gazebo version
+# add_compile_definitions(GAZEBO_VERSION_MAJOR=${gazebo_VERSION_MAJOR})
+add_definitions(-DGAZEBO_VERSION_MAJOR=${gazebo_VERSION_MAJOR})
+
 add_service_files(
   FILES
   Attach.srv
